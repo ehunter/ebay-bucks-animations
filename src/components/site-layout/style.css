@@ -1,5 +1,24 @@
+@font-face {
+  font-family: 'MarketSans';
+  src: url('https://ir.ebaystatic.com/cr/v/c1/market-sans/v1.0/MarketSans-Regular-WebS.woff2');
+}
+
+:root {
+  --ebay-purple: #533FAE;
+  --ebay-red: #FF5151;
+  --ebay-blue: #3665F3;
+  --ebay-light-blue: #4295FF;
+  --ebay-yellow: #F5DD0C;
+  --ebay-green: #ACCF02;
+  --duration: 250ms;
+  --delay: 135ms;
+  --ebay-standard-ease: cubic-bezier(0.4, 0.0, 0.3, 1);
+  --ebay-ease-in-out: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+  --ebay-bounce-ease: cubic-bezier(0.175, 0.885, 0.22, 1.575);
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'MarketSans', serif;
   background: #eee;
   padding: 0;
   margin: 0;
@@ -29,7 +48,7 @@ nav.menu a {
 }
 
 img.logo {
-  width: 160px;
+  width: 260px;
   height: 88px;
   margin-bottom: 1em;
 }
@@ -76,3 +95,98 @@ pre code {
   display: block;
   color: #396;
 }
+
+@keyframes fade-in-and-out {
+  0%   { opacity:0; }
+  50%  { opacity:1; }
+  100% { opacity:0; }
+}
+
+@keyframes scale-in-from-left {
+  from {
+    transform: scale(0,1);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes scale-in-from-bottom {
+  from {
+    transform: scale(1,0);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes slide-and-fade-in-from-left {
+  from {
+    transform: translate(-100%, -100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-to-right-and-scale-down {
+  from {
+    transform: translate(0) scale(1, 1);
+  }
+  to {
+    transform: translate(calc(var(--initPriceWidth)/2), 5px) scale(.5, .5);
+    opacity: .6;
+  }
+}
+
+@keyframes slide-from-left {
+  from {
+    transform: translate(-100%, 0%);
+  }
+  to {
+    transform: translate(100%, 0%);
+  }
+}
+
+@keyframes scale-up-bounce {
+  0% {
+    transform: scale(1,1);
+  }
+  50% {
+    transform: scale(1.3,1.3);
+  }
+  100% {
+    transform: scale(1,1);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    transform: scale(0,0);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+
+/* @import 'animations.css'; */

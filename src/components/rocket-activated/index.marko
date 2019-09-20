@@ -1,0 +1,36 @@
+class {
+  onCreate() {
+    this.state = { count: 0 };
+  }
+  increment() {
+    this.state.count++;
+  }
+}
+
+style {
+  .count {
+    color: #70b;
+    font-size: 3em;
+  }
+  .example-button {
+    font-size: 1em;
+    padding: 0.5em;
+  }
+  .rocket {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    animation: float 2s var(--ebay-ease-in-out) infinite;
+    animation-direction: alternate;
+  }
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+}
+
+<div.container>
+  <img.rocket src="./rocket-floating.svg" alt="rocket activated"/>
+</div>
