@@ -53,140 +53,33 @@ img.logo {
   margin-bottom: 1em;
 }
 
-h1 {
-  font-size: 2.5em;
-  font-weight: 300;
-  margin: 0;
-}
-
-h2 {
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-}
-
-h3 {
-  font-weight: 600;
-  margin-top: 1.5em;
-  margin-bottom: 0.5em;
-  font-size: 1em;
-}
-
-p {
-  line-height: 1.6;
-}
-
 .content {
   padding: 1em 2em;
-  max-width: 30em;
   margin: auto;
 }
 
-code {
-  color: #d03;
-  background-color: #f9f9f9;
-  padding: 0.1em 0.4em;
-  border: 1px solid #e5e5e5;
-  border-radius: 0.15em;
-  display: inline-block;
-}
-
-pre code {
-  display: block;
-  color: #396;
-}
-
-@keyframes fade-in-and-out {
-  0%   { opacity:0; }
-  50%  { opacity:1; }
-  100% { opacity:0; }
-}
-
-@keyframes scale-in-from-left {
-  from {
-    transform: scale(0,1);
+@keyframes flicker {
+  0% {
+    opacity: 1;
   }
-  to {
-    transform: scale(1,1);
-  }
-}
-
-@keyframes scale-in-from-bottom {
-  from {
-    transform: scale(1,0);
-  }
-  to {
-    transform: scale(1,1);
-  }
-}
-
-@keyframes fade-in {
-  from {
+  15% {
     opacity: 0;
   }
-  to {
+  30% {
+    opacity: 1;
+  }
+  30%, 100% {
     opacity: 1;
   }
 }
 
 @keyframes float {
   from {
-    transform: translateY(50px);
+    transform: translateY(35px);
   }
   to {
     transform: translateY(0px);
   }
 }
 
-@keyframes slide-and-fade-in-from-left {
-  from {
-    transform: translate(-100%, -100%);
-    opacity: 0;
-  }
-  to {
-    transform: translate(0);
-    opacity: 1;
-  }
-}
 
-@keyframes slide-to-right-and-scale-down {
-  from {
-    transform: translate(0) scale(1, 1);
-  }
-  to {
-    transform: translate(calc(var(--initPriceWidth)/2), 5px) scale(.5, .5);
-    opacity: .6;
-  }
-}
-
-@keyframes slide-from-left {
-  from {
-    transform: translate(-100%, 0%);
-  }
-  to {
-    transform: translate(100%, 0%);
-  }
-}
-
-@keyframes scale-up-bounce {
-  0% {
-    transform: scale(1,1);
-  }
-  50% {
-    transform: scale(1.3,1.3);
-  }
-  100% {
-    transform: scale(1,1);
-  }
-}
-
-@keyframes scale-in {
-  from {
-    transform: scale(0,0);
-  }
-  to {
-    transform: scale(1,1);
-  }
-}
-
-/* @import 'animations.css'; */
